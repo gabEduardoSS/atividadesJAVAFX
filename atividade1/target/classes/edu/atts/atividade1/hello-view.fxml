@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="149.0" prefWidth="275.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="edu.atts.atividade1.Calc">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label fx:id="aviso"/>
+    <VBox spacing="10">
+        <TextField fx:id="t1"/>
+        <TextField fx:id="t2"/>
+    </VBox>
+
+    <HBox alignment="center" spacing="15">
+        <Button fx:id="sum" onAction="#checkBotaoClicado" prefWidth="25" prefHeight="25" text="+"/>
+        <Button fx:id="sub" onAction="#checkBotaoClicado" prefWidth="25" prefHeight="25" text="-"/>
+        <Button fx:id="tim" onAction="#checkBotaoClicado" prefWidth="25" prefHeight="25" text="*"/>
+        <Button fx:id="div" onAction="#checkBotaoClicado" prefWidth="25" prefHeight="25" text="/"/>
+    </HBox>
+    <Label fx:id="resultado" text="Resultado: " />
+</VBox>

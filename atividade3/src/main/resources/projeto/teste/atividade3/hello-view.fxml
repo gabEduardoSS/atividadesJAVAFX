@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="240" prefWidth="320" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.teste.atividade3.Pessoa">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <VBox maxWidth="250" minWidth="250">
+        <Label text="Nome" />
+        <TextField fx:id="nomeTF" />
+    </VBox>
+    <VBox maxWidth="250" minWidth="250">
+        <Label text="Idade" />
+        <TextField fx:id="idadeTF" />
+    </VBox>
+    <HBox alignment="CENTER" maxWidth="250" minWidth="250" spacing="75">
+        <ComboBox value="Sexo" fx:id="sexo">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="M" />
+                    <String fx:value="F" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <CheckBox text="Pratica esportes" />
+    </HBox>
+    <Button fx:id="cadastrar" text="CADASTRAR" prefWidth="250"/>
+
+    <VBox maxWidth="250" minWidth="250">
+        <HBox>
+            <Label prefWidth="200" fx:id="nomeLB" text="Nome: " wrapText="true"/>
+            <Label prefWidth="200" fx:id="idadeLB" text="Idade: " wrapText="true"/>
+        </HBox>
+        <HBox>
+            <Label prefWidth="200" fx:id="sexoLB" text="Sexo: " wrapText="true"/>
+            <Label prefWidth="200" fx:id="esporteLB" text="Gosta de esportes: " wrapText="true"/>
+        </HBox>
+        <Label prefWidth="200" fx:id="maiorLB" text="Maior de idade: " wrapText="true"/>
+    </VBox>
+</VBox>

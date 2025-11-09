@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="projeto.teste.atividade4.media">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="10"/>
+    </padding>
+
+    <VBox spacing="10" alignment="CENTER">
+        <VBox spacing="5">
+            <Label text="Nome"/>
+            <TextField fx:id="nomeTF" promptText="Insira o nome"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Notas"/>
+            <HBox spacing="10">
+                <TextField fx:id="nota1TF" promptText="Nota 1"/>
+                <TextField fx:id="nota2TF" promptText="Nota 2"/>
+                <TextField fx:id="nota3TF" promptText="Nota 3"/>
+            </HBox>
+        </VBox>
+        <Button onAction="#calcularMedia" text="CALCULAR MÉDIA" alignment="CENTER" prefWidth="Infinity">
+            <VBox.margin>
+                <Insets top="10"/>
+            </VBox.margin>
+        </Button>
+        <Label fx:id="resultadoLB"/>
+        <Label fx:id="avisoLB"/>
+    </VBox>
+</VBox>

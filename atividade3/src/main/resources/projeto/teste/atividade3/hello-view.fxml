@@ -10,6 +10,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <Label fx:id="avisoLB"/>
     <VBox maxWidth="250" minWidth="250">
         <Label text="Nome" />
         <TextField fx:id="nomeTF" />
@@ -19,7 +20,7 @@
         <TextField fx:id="idadeTF" />
     </VBox>
     <HBox alignment="CENTER" maxWidth="250" minWidth="250" spacing="75">
-        <ComboBox value="Sexo" fx:id="sexo">
+        <ComboBox value="Sexo" fx:id="sexoCB">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="M" />
@@ -27,19 +28,31 @@
                 </FXCollections>
             </items>
         </ComboBox>
-        <CheckBox text="Pratica esportes" />
+        <CheckBox fx:id="esporteCB" text="Pratica esportes"/>
     </HBox>
-    <Button fx:id="cadastrar" text="CADASTRAR" prefWidth="250"/>
+    <Button text="CADASTRAR" prefWidth="250" onAction="#analise"/>
 
-    <VBox maxWidth="250" minWidth="250">
+    <VBox minWidth="150" alignment="CENTER">
         <HBox>
-            <Label prefWidth="200" fx:id="nomeLB" text="Nome: " wrapText="true"/>
-            <Label prefWidth="200" fx:id="idadeLB" text="Idade: " wrapText="true"/>
+            <Label text="Nome: "/>
+            <Label fx:id="nomeLB" wrapText="true"/>
         </HBox>
         <HBox>
-            <Label prefWidth="200" fx:id="sexoLB" text="Sexo: " wrapText="true"/>
-            <Label prefWidth="200" fx:id="esporteLB" text="Gosta de esportes: " wrapText="true"/>
+            <Label text="Idade: "/>
+            <Label fx:id="idadeLB" wrapText="true"/>
         </HBox>
-        <Label prefWidth="200" fx:id="maiorLB" text="Maior de idade: " wrapText="true"/>
+        <HBox>
+            <Label text="Sexo: "/>
+            <Label fx:id="sexoLB" wrapText="true"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Gosta de esporte?: "/>
+            <Label fx:id="esporteLB" wrapText="true"/>
+        </HBox>
+        <HBox>
+            <Label text="É maior de idade?: "/>
+            <Label fx:id="maiorLB" wrapText="true"/>
+        </HBox>
     </VBox>
 </VBox>
